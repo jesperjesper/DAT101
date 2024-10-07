@@ -16,11 +16,32 @@
 			</p>
       <li>How do parentheses affect the arithmetic outcome of an expression?</li>
       <p>
-				[Replace this with you answer]
+				[In JavaScript, multiplication ALWAYS go before addition and subtraction. But parantheses go before multiplication and division. 
+      </p>
+        We use parantheses to force the order in which an expression is computed. As an example, from the questions:
+      </p>
+        2 + 3 * 2 - 4 * 6
+      </p>
+        Here 3*2 goes first then 4*6
+      </p>
+        So we are left with 2 + 6 - 24
+      </p>
+        which is -16
+      </p>
+        We want -34 though so we type 2 + (3*(2-4)*6)
+      </p>
+        2 + (3*-2 * 6)
+      </p>
+        2 -36 = -34
+      </p>
+        So we have used parantheses to force our desired outcome 
+         ]
 			</p>
       <li>How do we limit floating-point numbers to a given number of decimals?</li>
       <p>
-				[Replace this with you answer]
+				[Various ways. I have used two varieties in the questions.
+      </p>
+      One way is to use Math.Round(), which rounds a number to the nearest integer. I have also used toFixed(), which rounds a string to a desired amount of decimals ]
 			</p>
       <li>How can we compare two floating-point values to see if they are equal (is 12.199999 the same as 12.2)?</li>
       <p>
@@ -28,15 +49,37 @@
 			</p>
       <li>What do comparison operators return, and how can we check if they are FALSE or TRUE?</li>
       <p>
-				[Replace this with you answer]
+				[Comparison operators return boolean values, and return TRUE or FALSe depening on what is being compared and the comparison operators used.
+      </p>
+      What they return depends also on the data types being compared. Two integer being compared is simple for instance
+    </p>
+    When we compare two strings, we compare which one is greater when converted to numbers. Crucially, comparisons are done character by character, and the corresponding unicode numbers are compared. 
+  </p>
+  When comparing strings, the number of characters are not important. This is why, as in the questions, abcd is not greater than bcd. 
+  </p>
+  abcd is not greater than bcd because b is greater than a]
 			</p>
       <li>How does the Math.random() function work, and what can it be used for?</li>
       <p>
-				[Replace this with you answer]
+				[Math.random() returns a floating point number that is higher than 0 but less then 1. We can use to generate psuedo-random numbers
+      </p>
+      We can also set an upper bound for the number by using Math.random() * n, where n is an integer
+      It can also be set to generate a number between a chosen min and max by using (Math.random() * (max - min) + min)
+    </p>
+    So, essentially it used for generating random numbers.]
 			</p>
       <li>What is modulus (%), and when do we need this operator in mathematical operations?</li>
       <p>
-				[Replace this with you answer]
+				[Modulus gives us the remainder when dividing a number. 
+      </p>
+      Using the question from the task as an example, I am tasked with using modulus to calculate how many weeks and days are in 131 days. 
+    </p>
+    When dividing 131/7, I get 18.7~. By using modulus here 131 % 7, it is checking how many whole parts of 7 fit into 131, and then retrieving the remainder. 
+  </p>
+  So, 126, with 5 left over.
+        This is just a really neat and straightforward way of solving the question. 
+      </p>
+      I suppose we need this operator when we are  interested in what remains when we divide two numbers. ]
 			</p>
     </ol>
 		<script type="module" src="./task_2-2.mjs" defer></script>
