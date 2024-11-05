@@ -119,7 +119,7 @@ for (let row = 1; row <= 7; row++) {  // 7 rows
 
 printOut(newLine);
 
-printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
+printOut("--- Part 6 -----------------------------------------------------------------------------------------------");
 
 for (let student = 1; student <= 5; student++) { //working our way through each student
     let studentgrade = Math.floor(Math.random() * 236) + 1; //generates grade
